@@ -3,10 +3,12 @@ if __name__ == "__main__":
     exit()
 else:
     def frames(dir_path, video_path):
-        import cv2
+        import cv2, moviepy.editor
         cam = cv2.VideoCapture(video_path)
-        for i in range:
-            ret,frame = cam.read()
+        i = -1
+        while True:
+            i += 1
+            ret, frame = cam.read()
             if ret:
                 name = dir_path + str(i) + '.jpg'
                 print ('Creating ' + name)
